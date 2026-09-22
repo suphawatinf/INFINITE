@@ -283,25 +283,25 @@ DELTA_LITE_APPS=(
 )
 
 ARCEUS_NORMAL_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.5_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.6_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.7_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.8_2.737.1584.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.5_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.6_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.7_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.8_2.739.691.apk"
 )
 
 ARCEUS_LITE_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.6_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.7_2.737.1584.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.8_2.737.1584.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.6_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.7_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.8_2.739.691.apk"
 )
 
 check_password

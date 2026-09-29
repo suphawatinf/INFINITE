@@ -142,7 +142,7 @@ install_apk() {
     echo -e "${CR} ${C_YELLOW}📥 กำลังดาวน์โหลด: ${C_WHITE}$NAME${C_RESET}"
 
     if [ $DL_STATUS -eq 0 ] && [ -f "$TEMP_FILE" ]; then
-        local FILE_SIZE=$(du -k "$TEMP_FILE" | cut -f1)
+        local FILE_SIZE=$(du -k "$TEMP_FILE" | awk '{print $1}')
         if [ "$FILE_SIZE" -gt 1024 ]; then
             chmod 777 "$TEMP_FILE" 2>/dev/null
             

@@ -243,7 +243,7 @@ process_selection() {
             clear
             stty sane 2>/dev/null
             echo -e "${C_CYAN}${C_DIV}${C_RESET}"
-            echo -e "                 ${C_GREEN}🚀 กำลังดำเนินการติดตั้ง${C_RESET}"
+            echo -e "                  ${C_GREEN}🚀 กำลังดำเนินการติดตั้ง${C_RESET}"
             echo -e "${C_CYAN}${C_DIV}${C_RESET}"
 
             for INDEX in "${SELECTED_INDICES[@]}"; do
@@ -283,25 +283,25 @@ DELTA_LITE_APPS=(
 )
 
 ARCEUS_NORMAL_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.5_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.6_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.7_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.8_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.5_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.6_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.7_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.8_2.740.931.apk"
 )
 
 ARCEUS_LITE_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.6_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.7_2.739.691.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.8_2.739.691.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.6_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.7_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.8_2.740.931.apk"
 )
 
 check_password
@@ -315,7 +315,7 @@ while true; do
     echo -e "${C_CYAN} ██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝  ${C_RESET}"
     echo -e "${C_CYAN} ██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗${C_RESET}"
     echo -e "${C_CYAN} ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝${C_RESET}"
-    echo -e "${C_YELLOW}                 [ INFINITE SHOP $SCRIPT_VERSION ]${C_RESET}"
+    echo -e "${C_YELLOW}                  [ INFINITE SHOP $SCRIPT_VERSION ]${C_RESET}"
     echo -e "${C_CYAN}${C_DIV}${C_RESET}"
     echo -e "  👑 ${C_WHITE}Dev${C_RESET}  : $OWNER_NAME"
     echo -e "  💬 ${C_WHITE}Disc${C_RESET} : $DISCORD_LINK"

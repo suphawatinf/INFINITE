@@ -18,15 +18,15 @@ C_WHITE="\033[1;37m"
 C_EMERALD="\033[1;92m"
 CR="\r\033[K"
 
-# เส้นคั่นความกว้าง 55 ตัวอักษร (พอดีกับโลโก้เป๊ะ)
-C_DIV="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-C_SUB="───────────────────────────────────────────────────────"
+# เส้นคั่นความกว้างพอดีจอมือถือ
+C_DIV="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+C_SUB="──────────────────────────────────────────"
 
 OWNER_NAME="Suphawat"
 DISCORD_LINK="https://discord.gg/VCPAaUy46C"
 VALID_PASSWORDS=("1688" "BIG49" "wiwatz" "fku09")
 MAX_ATTEMPTS=3
-SCRIPT_VERSION="v1.1"
+SCRIPT_VERSION="v1.3"
 
 type_text() {
     local text="$1"
@@ -81,7 +81,7 @@ get_device_info() {
 check_password() {
     clear
     echo -e "${C_EMERALD}${C_DIV}${C_RESET}"
-    echo -e "        ${C_GREEN}⚡ SECURE SYSTEM AUTHENTICATION ⚡${C_RESET}"
+    echo -e "    ${C_GREEN}⚡ SECURE SYSTEM AUTHENTICATION ⚡${C_RESET}"
     echo -e "${C_EMERALD}${C_DIV}${C_RESET}"
     
     local ATTEMPTS=0
@@ -146,7 +146,7 @@ install_apk() {
         if [ "$FILE_SIZE" -gt 1024 ]; then
             chmod 777 "$TEMP_FILE" 2>/dev/null
             
-            echo -e "${CR} ${C_GREEN}⚡ กำลังดำเนินการติดตั้ง:${C_RESET} $NAME ..."
+            echo -e "${CR} ${C_GREEN}⚡ กำลังติดตั้ง:${C_RESET} $NAME ..."
             
             if command -v su >/dev/null 2>&1 && su -c "true" >/dev/null 2>&1; then
                 su -c "pm install -r \"$TEMP_FILE\"" >/dev/null 2>&1
@@ -154,19 +154,19 @@ install_apk() {
                 stty sane 2>/dev/null
                 
                 if [ $PM_STATUS -eq 0 ]; then
-                    echo -e "${CR} ${C_GREEN}✅ ติดตั้งแอปเสร็จสมบูรณ์ลงในเครื่องแล้ว!${C_RESET}"
+                    echo -e "${CR} ${C_GREEN}✅ ติดตั้งสำเร็จเรียบร้อย!${C_RESET}"
                 else
-                    echo -e "${CR} ${C_RED}❌ ติดตั้งเบื้องหลังล้มเหลว เรียกหน้าต่างปกติ...${C_RESET}"
+                    echo -e "${CR} ${C_RED}❌ ติดตั้งเบื้องหลังไม่สำเร็จ เปิดหน้าต่างปกติ...${C_RESET}"
                     termux-open --content-type "application/vnd.android.package-archive" "$TEMP_FILE"
                     stty sane 2>/dev/null
                 fi
             else
                 termux-open --content-type "application/vnd.android.package-archive" "$TEMP_FILE"
                 stty sane 2>/dev/null
-                echo -e "${CR} ${C_GREEN}✅ เรียกหน้าต่างติดตั้งแล้ว:${C_RESET} (กด 'ติดตั้ง' บนจอ)"
+                echo -e "${CR} ${C_GREEN}✅ เปิดหน้าต่างติดตั้งแล้ว${C_RESET}"
             fi
         else
-            echo -e "${CR} ${C_RED}❌ ไฟล์เสีย หรือลิงก์หมดอายุ (พบไฟล์ขนาดแค่ ${FILE_SIZE}KB)${C_RESET}"
+            echo -e "${CR} ${C_RED}❌ ไฟล์เสียหรือลิงก์หมดอายุ${C_RESET}"
             rm -f "$TEMP_FILE"
         fi
     else
@@ -184,7 +184,7 @@ process_selection() {
         clear
         stty sane 2>/dev/null
         echo -e "${C_CYAN}${C_DIV}${C_RESET}"
-        echo -e "                📁 หมวดหมู่: ${C_YELLOW}$CATEGORY_NAME${C_RESET}"
+        echo -e "       📁 หมวดหมู่: ${C_YELLOW}$CATEGORY_NAME${C_RESET}"
         echo -e "${C_CYAN}${C_DIV}${C_RESET}"
         
         for i in "${!APPS[@]}"; do
@@ -192,8 +192,8 @@ process_selection() {
         done
         
         echo -e "${CR}${C_CYAN}${C_SUB}${C_RESET}"
-        echo -e "${CR}  💡 ${C_YELLOW}พิมพ์หมายเลข (1-${TOTAL}), ช่วง (เช่น 1-3) หรือ all${C_RESET}"
-        echo -e "${CR}     ${C_WHITE}(พิมพ์ 0 เพื่อกลับไปหน้าเมนูหลัก)${C_RESET}"
+        echo -e "${CR}  💡 ${C_YELLOW}พิมพ์เลข (1-${TOTAL}), ช่วง (1-3) หรือ all${C_RESET}"
+        echo -e "${CR}     ${C_WHITE}(พิมพ์ 0 เพื่อกลับเมนูหลัก)${C_RESET}"
         echo -e "${CR}${C_CYAN}${C_SUB}${C_RESET}"
 
         echo -ne "${CR}  🎯 ${C_GREEN}เลือกรายการ: ${C_RESET}"
@@ -243,7 +243,7 @@ process_selection() {
             clear
             stty sane 2>/dev/null
             echo -e "${C_CYAN}${C_DIV}${C_RESET}"
-            echo -e "                 ${C_GREEN}🚀 กำลังดำเนินการติดตั้ง${C_RESET}"
+            echo -e "           ${C_GREEN}🚀 กำลังดำเนินการติดตั้ง${C_RESET}"
             echo -e "${C_CYAN}${C_DIV}${C_RESET}"
 
             for INDEX in "${SELECTED_INDICES[@]}"; do
@@ -254,7 +254,7 @@ process_selection() {
             echo -ne "${CR}  ✨ ${C_YELLOW}กด Enter เพื่อกลับไปหน้าเลือกแอป...${C_RESET}"
             read
         else
-            echo -e "${CR}  ${C_RED}[!] หมายเลขไม่ถูกต้อง (เลือกได้เฉพาะ 1-${TOTAL} หรือ all)${C_RESET}"
+            echo -e "${CR}  ${C_RED}[!] หมายเลขไม่ถูกต้อง (เลือก 1-${TOTAL} หรือ all)${C_RESET}"
             sleep 1.2
         fi
     done
@@ -284,24 +284,24 @@ DELTA_LITE_APPS=(
 
 ARCEUS_NORMAL_APPS=(
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.742.1059.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.5_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.6_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.7_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.8_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.5_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.6_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.7_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.8_2.742.1059.apk"
 )
 
 ARCEUS_LITE_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.742.1059.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.742.1059.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.6_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.7_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.8_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.6_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.7_2.742.1059.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.8_2.742.1059.apk"
 )
 
 check_password
@@ -309,28 +309,22 @@ check_password
 while true; do
     clear
     stty sane 2>/dev/null
-    echo -e "${C_CYAN} ██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗${C_RESET}"
-    echo -e "${C_CYAN} ██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝${C_RESET}"
-    echo -e "${C_CYAN} ██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║   █████╗  ${C_RESET}"
-    echo -e "${C_CYAN} ██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝  ${C_RESET}"
-    echo -e "${C_CYAN} ██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗${C_RESET}"
-    echo -e "${C_CYAN} ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝${C_RESET}"
-    echo -e "${C_YELLOW}                   [ INFINITE SHOP $SCRIPT_VERSION ]${C_RESET}"
+    echo -e "${C_CYAN}  INFINITE SHOP $SCRIPT_VERSION${C_RESET}"
     echo -e "${C_CYAN}${C_DIV}${C_RESET}"
     echo -e "   👑 ${C_WHITE}Dev${C_RESET}  : $OWNER_NAME"
     echo -e "   💬 ${C_WHITE}Disc${C_RESET} : $DISCORD_LINK"
     echo -e "${C_CYAN}${C_SUB}${C_RESET}"
     echo -e "   📱 ${C_GREEN}OS${C_RESET}   : Android $OS_VER | $ARCH"
-    echo -e "   💾 ${C_GREEN}MEM${C_RESET}  : RAM $RAM_GB | ROM $ROM_INFO"
+    echo -e "   💾 ${C_GREEN}MEM${C_RESET}  : RAM $RAM_GB"
     echo -e "${C_CYAN}${C_DIV}${C_RESET}"
     
-    echo -e "${CR}   ${C_PURPLE}[1]${C_RESET} Delta      (${C_GREEN}${#DELTA_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}   ${C_PURPLE}[1]${C_RESET} Delta        (${C_GREEN}${#DELTA_APPS[@]}${C_RESET} Apps)"
     echo -e "${CR}   ${C_PURPLE}[2]${C_RESET} Delta lite   (${C_GREEN}${#DELTA_LITE_APPS[@]}${C_RESET} Apps)"
     echo -e "${CR}   ${C_PURPLE}[3]${C_RESET} ArceusX      (${C_GREEN}${#ARCEUS_NORMAL_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}   ${C_PURPLE}[4]${C_RESET} ArceusX lite (${C_GREEN}${#ARCEUS_LITE_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}   ${C_PURPLE}[4]${C_RESET} ArceusX lite (${C_GREEN}${#ARCE_LITE_APPS[@]}${C_RESET} Apps)"
     echo -e "${CR}   ${C_RED}[0] ออกจากระบบ${C_RESET}"
     echo -e "${CR}${C_CYAN}${C_SUB}${C_RESET}"
-    echo -ne "${CR}   🎯 ${C_GREEN}เลือกหมวดหมู่ที่ต้องการ (0-4): ${C_RESET}"
+    echo -ne "${CR}   🎯 ${C_GREEN}เลือกเมนู (0-4): ${C_RESET}"
     read MAIN_CHOICE
     echo ""
 
@@ -341,7 +335,7 @@ while true; do
         4) process_selection "ArceusX lite" "${ARCEUS_LITE_APPS[@]}" ;;
         0) break ;;
         *) 
-            echo -e "${CR}   ${C_RED}[!] เลือกเมนูไม่ถูกต้อง (เลือกได้เฉพาะ 0-4)${C_RESET}" 
+            echo -e "${CR}   ${C_RED}[!] เลือกเมนูไม่ถูกต้อง (0-4)${C_RESET}" 
             sleep 1.2
             ;;
     esac
@@ -350,6 +344,6 @@ done
 stty sane 2>/dev/null
 clear
 echo -e "${C_CYAN}${C_DIV}${C_RESET}"
-echo -e "                ${C_GREEN}✨ ออกจากระบบเรียบร้อย ✨${C_RESET}"
+echo -e "           ${C_GREEN}✨ ออกจากระบบเรียบร้อย ✨${C_RESET}"
 echo -e "${C_CYAN}${C_DIV}${C_RESET}"
 echo ""

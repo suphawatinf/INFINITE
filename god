@@ -81,7 +81,7 @@ get_device_info() {
 check_password() {
     clear
     echo -e "${C_EMERALD}${C_DIV}${C_RESET}"
-    echo -e "         ${C_GREEN}⚡ SECURE SYSTEM AUTHENTICATION ⚡${C_RESET}"
+    echo -e "          ${C_GREEN}⚡ SECURE SYSTEM AUTHENTICATION ⚡${C_RESET}"
     echo -e "${C_EMERALD}${C_DIV}${C_RESET}"
     
     local ATTEMPTS=0
@@ -261,25 +261,25 @@ process_selection() {
 }
 
 DELTA_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.1_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.2_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.3_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.4_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.5_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.6_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.7_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.8_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.1_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.2_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.3_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.4_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.5_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.6_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.7_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.by.Suphawat.8_2.741.1062.apk"
 )
 
 DELTA_LITE_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.1_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.2_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.3_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.4_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.5_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.6_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.7_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.8_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.1_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.2_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.3_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.4_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.5_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.6_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.7_2.741.1062.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/Delta.lite.by.Suphawat.8_2.741.1062.apk"
 )
 
 ARCEUS_NORMAL_APPS=(
@@ -324,10 +324,10 @@ while true; do
     echo -e "  💾 ${C_GREEN}MEM${C_RESET}  : RAM $RAM_GB | ROM $ROM_INFO"
     echo -e "${C_CYAN}${C_DIV}${C_RESET}"
     
-    echo -e "${CR}  ${C_PURPLE}[1]${C_RESET} Delta      (${C_GREEN}${#DELTA_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_PURPLE}[2]${C_RESET} Delta lite   (${C_GREEN}${#DELTA_LITE_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_PURPLE}[3]${C_RESET} ArceusX      (${C_GREEN}${#ARCEUS_NORMAL_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_PURPLE}[4]${C_RESET} ArceusX lite (${C_GREEN}${#ARCEUS_LITE_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}  ${C_PURPLE}[1]${C_RESET} Delta"
+    echo -e "${CR}  ${C_PURPLE}[2]${C_RESET} Delta lite"
+    echo -e "${CR}  ${C_PURPLE}[3]${C_RESET} ArceusX"
+    echo -e "${CR}  ${C_PURPLE}[4]${C_RESET} ArceusX lite"
     echo -e "${CR}  ${C_RED}[0] ออกจากระบบ${C_RESET}"
     echo -e "${CR}${C_CYAN}${C_SUB}${C_RESET}"
     echo -ne "${CR}  🎯 ${C_GREEN}เลือกหมวดหมู่ที่ต้องการ (0-4): ${C_RESET}"

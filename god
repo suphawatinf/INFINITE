@@ -26,7 +26,7 @@ OWNER_NAME="Suphawat"
 DISCORD_LINK="https://discord.gg/VCPAaUy46C"
 VALID_PASSWORDS=("1688" "BIG49" "wiwatz" "fku09")
 MAX_ATTEMPTS=3
-SCRIPT_VERSION="v1.0"
+SCRIPT_VERSION="v1.1"
 
 type_text() {
     local text="$1"
@@ -81,7 +81,7 @@ get_device_info() {
 check_password() {
     clear
     echo -e "${C_EMERALD}${C_DIV}${C_RESET}"
-    echo -e "          ${C_GREEN}⚡ SECURE SYSTEM AUTHENTICATION ⚡${C_RESET}"
+    echo -e "        ${C_GREEN}⚡ SECURE SYSTEM AUTHENTICATION ⚡${C_RESET}"
     echo -e "${C_EMERALD}${C_DIV}${C_RESET}"
     
     local ATTEMPTS=0
@@ -243,7 +243,7 @@ process_selection() {
             clear
             stty sane 2>/dev/null
             echo -e "${C_CYAN}${C_DIV}${C_RESET}"
-            echo -e "                  ${C_GREEN}🚀 กำลังดำเนินการติดตั้ง${C_RESET}"
+            echo -e "                 ${C_GREEN}🚀 กำลังดำเนินการติดตั้ง${C_RESET}"
             echo -e "${C_CYAN}${C_DIV}${C_RESET}"
 
             for INDEX in "${SELECTED_INDICES[@]}"; do
@@ -283,7 +283,7 @@ DELTA_LITE_APPS=(
 )
 
 ARCEUS_NORMAL_APPS=(
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.1_2.742.1059.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.2_2.740.931.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.3_2.740.931.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.by.Suphawat.4_2.740.931.apk"
@@ -295,7 +295,7 @@ ARCEUS_NORMAL_APPS=(
 
 ARCEUS_LITE_APPS=(
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.1_2.740.931.apk"
-  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.740.931.apk"
+  "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.2_2.742.1059.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.3_2.740.931.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.4_2.740.931.apk"
   "https://github.com/suphawatinf/INFINITESHOP/releases/download/V1.0/ArceusX.lite.by.Suphawat.5_2.740.931.apk"
@@ -315,22 +315,22 @@ while true; do
     echo -e "${C_CYAN} ██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝  ${C_RESET}"
     echo -e "${C_CYAN} ██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗${C_RESET}"
     echo -e "${C_CYAN} ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝${C_RESET}"
-    echo -e "${C_YELLOW}                  [ INFINITE SHOP $SCRIPT_VERSION ]${C_RESET}"
+    echo -e "${C_YELLOW}                   [ INFINITE SHOP $SCRIPT_VERSION ]${C_RESET}"
     echo -e "${C_CYAN}${C_DIV}${C_RESET}"
-    echo -e "  👑 ${C_WHITE}Dev${C_RESET}  : $OWNER_NAME"
-    echo -e "  💬 ${C_WHITE}Disc${C_RESET} : $DISCORD_LINK"
+    echo -e "   👑 ${C_WHITE}Dev${C_RESET}  : $OWNER_NAME"
+    echo -e "   💬 ${C_WHITE}Disc${C_RESET} : $DISCORD_LINK"
     echo -e "${C_CYAN}${C_SUB}${C_RESET}"
-    echo -e "  📱 ${C_GREEN}OS${C_RESET}   : Android $OS_VER | $ARCH"
-    echo -e "  💾 ${C_GREEN}MEM${C_RESET}  : RAM $RAM_GB | ROM $ROM_INFO"
+    echo -e "   📱 ${C_GREEN}OS${C_RESET}   : Android $OS_VER | $ARCH"
+    echo -e "   💾 ${C_GREEN}MEM${C_RESET}  : RAM $RAM_GB | ROM $ROM_INFO"
     echo -e "${C_CYAN}${C_DIV}${C_RESET}"
     
-    echo -e "${CR}  ${C_PURPLE}[1]${C_RESET} Delta        (${C_GREEN}${#DELTA_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_PURPLE}[2]${C_RESET} Delta lite   (${C_GREEN}${#DELTA_LITE_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_PURPLE}[3]${C_RESET} ArceusX      (${C_GREEN}${#ARCEUS_NORMAL_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_PURPLE}[4]${C_RESET} ArceusX lite (${C_GREEN}${#ARCEUS_LITE_APPS[@]}${C_RESET} Apps)"
-    echo -e "${CR}  ${C_RED}[0] ออกจากระบบ${C_RESET}"
+    echo -e "${CR}   ${C_PURPLE}[1]${C_RESET} Delta      (${C_GREEN}${#DELTA_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}   ${C_PURPLE}[2]${C_RESET} Delta lite   (${C_GREEN}${#DELTA_LITE_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}   ${C_PURPLE}[3]${C_RESET} ArceusX      (${C_GREEN}${#ARCEUS_NORMAL_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}   ${C_PURPLE}[4]${C_RESET} ArceusX lite (${C_GREEN}${#ARCEUS_LITE_APPS[@]}${C_RESET} Apps)"
+    echo -e "${CR}   ${C_RED}[0] ออกจากระบบ${C_RESET}"
     echo -e "${CR}${C_CYAN}${C_SUB}${C_RESET}"
-    echo -ne "${CR}  🎯 ${C_GREEN}เลือกหมวดหมู่ที่ต้องการ (0-4): ${C_RESET}"
+    echo -ne "${CR}   🎯 ${C_GREEN}เลือกหมวดหมู่ที่ต้องการ (0-4): ${C_RESET}"
     read MAIN_CHOICE
     echo ""
 
@@ -341,7 +341,7 @@ while true; do
         4) process_selection "ArceusX lite" "${ARCEUS_LITE_APPS[@]}" ;;
         0) break ;;
         *) 
-            echo -e "${CR}  ${C_RED}[!] เลือกเมนูไม่ถูกต้อง (เลือกได้เฉพาะ 0-4)${C_RESET}" 
+            echo -e "${CR}   ${C_RED}[!] เลือกเมนูไม่ถูกต้อง (เลือกได้เฉพาะ 0-4)${C_RESET}" 
             sleep 1.2
             ;;
     esac
